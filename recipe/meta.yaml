@@ -1,4 +1,4 @@
-{% set version = "0.1.3" %}
+{% set version = "1.0.0" %}
 package:
   name: kiwisolver
   version: {{ version }}
@@ -6,11 +6,10 @@ package:
 source:
   fn: kiwisolver-{{ version }}.tar.gz
   url: https://github.com/nucleic/kiwi/archive/{{ version }}.tar.gz
-  sha256: 761757e93f884223281af7969df85a93542a66769ca13617084baf82848c656d
+  sha256: 8448faa155f3ef55d352d1bf6b537fc6f0c39156ab7af569b7c2ad0ebd937f21
 
 build:
   number: 0
-  skip: True  # [py3k]
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
