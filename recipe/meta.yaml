@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 package:
   name: kiwisolver
   version: {{ version }}
@@ -6,7 +6,7 @@ package:
 source:
   fn: kiwisolver-{{ version }}.tar.gz
   url: https://github.com/nucleic/kiwi/archive/{{ version }}.tar.gz
-  sha256: 8448faa155f3ef55d352d1bf6b537fc6f0c39156ab7af569b7c2ad0ebd937f21
+  sha256: 8e7fc64fea6d3af96aed63391d35bbbd292a429c8e463277dac839b735503a28
 
 build:
   number: 0
