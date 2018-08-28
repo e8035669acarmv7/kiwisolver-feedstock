@@ -18,7 +18,6 @@ requirements:
   host:
     - python
     - pip
-    - setuptools
   run:
     - python
 
@@ -41,3 +40,4 @@ extra:
     - MatthieuDartiailh
     - sccolbert
     - tacaswell
+    - ocefpaf
