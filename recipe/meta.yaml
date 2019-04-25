@@ -28,7 +28,7 @@ test:
 about:
   home: https://github.com/nucleic/kiwi
   license: BSD 3-Clause
-  license_file: COPYING.txt
+  license_file: LICENSE
   license_family: BSD
   summary: A fast implementation of the Cassowary constraint solver
 
