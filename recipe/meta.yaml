@@ -10,7 +10,8 @@ source:
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  skip: true   # [py2k]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -20,14 +21,17 @@ requirements:
   host:
     - python
     - pip
-    - setuptools
-    - cppy
+    - cppy >=1.1.0
   run:
     - python
 
 test:
   imports:
     - kiwisolver
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/nucleic/kiwi
