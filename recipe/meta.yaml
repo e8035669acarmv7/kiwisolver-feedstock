@@ -1,4 +1,4 @@
-{% set version = "1.3.2" %}
+{% set version = "1.4.0" %}
 
 package:
   name: kiwisolver
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/k/kiwisolver/kiwisolver-{{ version }}.tar.gz
-  sha256: fc4453705b81d03568d5b808ad8f09c77c47534f6ac2e72e733f9ca4714aa75c
+  sha256: 7508b01e211178a85d21f1f87029846b77b2404a4c68cbd14748d4d4142fa3b8
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,9 +21,12 @@ requirements:
   host:
     - python
     - pip
-    - cppy >=1.1.0
+    - cppy >=1.2.0
+    - setuptools >=42
+    - setuptools-scm >=3.4.3
   run:
     - python
+    - typing-extensions  # [py<38]
 
 test:
   imports:
